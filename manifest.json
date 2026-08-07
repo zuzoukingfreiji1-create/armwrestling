@@ -1,0 +1,13 @@
+{
+  "id": "./",
+  "name": "GripForge Arm Wrestling",
+  "short_name": "GripForge",
+  "description": "Offline arm-wrestling training, PR and workout tracker.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#080808",
+  "theme_color": "#090909",
+  "categories": ["fitness", "sports", "health"]
+}

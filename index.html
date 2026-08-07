@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#090909">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="GripForge">
+  <meta name="description" content="Offline arm-wrestling training, PR and workout tracker.">
+  <link rel="manifest" href="./manifest.json">
   <title>GripForge — Arm Wrestling Training</title>
   <style>
     /* ---------- Design system ---------- */
@@ -273,6 +276,7 @@
 
     /* ---------- Initial paint ---------- */
     applyTheme();renderHome();renderSettings();loadMusicLibrary();
+    if('serviceWorker' in navigator&&location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(error=>console.warn('Offline mode unavailable',error)));
   </script>
 </body>
 </html>
